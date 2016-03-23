@@ -8,3 +8,4 @@
 <%= f.check_box :allow_post_voting %>
 <%= f.check_box :private %>
 <%= f.submit t(:save_changes, default: "Save Changes"), class: 'btn btn-warning' %>
+<%= link_to t(:cancel_discussion, default: "Back"), admin_communities_path, class: 'btn btn-warning'%>

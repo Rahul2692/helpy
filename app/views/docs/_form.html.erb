@@ -37,3 +37,4 @@
   <% end %>
   <%= hidden_field_tag :lang, params[:lang] unless params[:lang].nil? %>
   <%= f.submit "Save Changes", class: 'btn btn-warning' %>
+  <%= link_to t(:cancel_discussion, default: "Back"), admin_knowledgebase_path, class: 'btn btn-warning'%>
