@@ -48,6 +48,10 @@ class UsersController < ApplicationController
 
   before_action :authenticate_user!, except: :set_client_id
 
+  def index
+    @users = User.all
+  end
+
   def show
     @user = current_user
   end

@@ -1,0 +1,19 @@
+<div class="row content-row">
+<% if @users.count==0%>
+<%= t(no_users_found)%>
+<% else%>
+<table align="center" width="100%" cellpadding="1" cellspacing="1" id="listing" class="table_with_paginate">
+<tr class="tr-head">
+<td></td>
+<td></td>
+</tr>
+<% @users.each do |user|%>
+<tr>
+<td><span style="padding-right: 10px;"><%= link_to avatar_image(user, size=40), user_profile_path(user.id) %></span> 
+<strong><%= link_to (user.name),user_profile_path(user.id)%></strong></td>
+<td><span><%= user.email%></span></td>
+</tr>
+<% end%>
+</table>
+<% end%>
+</div>

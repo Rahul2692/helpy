@@ -10,13 +10,15 @@ development:
   database: helpy_development
   port: 5432
   host: localhost
+  username: rahul
+  password: root
 
 test:
   <<: *default
   database: helpy_test
 
-production:
-  <<: *default
-  database: helpy_production
-  username: helpy
-  password: <%= ENV['helpy_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: helpy_production
+#   username: helpy
+#   password: <%= ENV['helpy_DATABASE_PASSWORD'] %>

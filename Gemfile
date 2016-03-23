@@ -148,3 +148,6 @@ group :production do
 end
 
 ruby "2.2.1"
+gem 'execjs'
+
+gem 'therubyracer'
